@@ -49,6 +49,22 @@ body {
     padding: 1rem 20px;
 }
 
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-brand .logo {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--primary-color);
+    padding: 2px;
+    background: white;
+}
+
 .nav-brand h1 {
     font-size: 1.5rem;
     color: var(--primary-color);
