@@ -60,14 +60,14 @@ body {
     height: 45px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid var(--primary-color);
+    border: 2px solid var(--text-dark);
     padding: 2px;
     background: white;
 }
 
 .nav-brand h1 {
     font-size: 1.5rem;
-    color: var(--primary-color);
+    color: var(--text-dark);
     font-weight: 700;
 }
 
