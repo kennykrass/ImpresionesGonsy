@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preguntas Frecuentes - Impresiones Gonsy</title>
+  <meta name="description" content="Preguntas frecuentes: mínimos, tiempos de entrega, técnicas, envíos, archivos, pagos, devoluciones, cuidado de prendas y contacto.">
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="apple-touch-icon" href="logo.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <div class="nav-brand">
+        <img src="logo.png" alt="Impresiones Gonsy" class="logo">
+        <h1>Impresiones Gonsy</h1>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="index.html#inicio">Inicio</a></li>
+        <li><a href="index.html#servicios">Servicios</a></li>
+        <li><a href="index.html#galeria">Galería</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container" style="padding: 60px 0;">
+    <h2 class="section-title" style="margin-bottom: 1rem;">Preguntas Frecuentes</h2>
+    <p style="color: var(--text-light); margin-bottom: 2rem;">Última actualización: 14/09/2025</p>
+
+    <section class="technique-section" style="border-top-color: var(--accent-color);">
+      <div class="faq" style="display:grid; gap:1rem;">
+        <div>
+          <h3>¿Cuál es el mínimo de piezas?</h3>
+          <p>Desde 1 pieza. Manejamos precios por volumen desde 12, 24, 50 y 100+ unidades.</p>
+        </div>
+        <div>
+          <h3>¿Qué técnicas manejan?</h3>
+          <p>Sublimación, DTF, Vinil Textil, Bordado y Grabado Láser.</p>
+        </div>
+        <div>
+          <h3>¿Cuánto tarda mi pedido?</h3>
+          <p>De 2 a 5 días hábiles tras el pago y la aprobación del arte. Urgentes sujetos a agenda (pueden generar cargo extra).</p>
+        </div>
+        <div>
+          <h3>¿Hacen envíos?</h3>
+          <p>Sí, a todo México. El costo y tiempo dependen de la paquetería. También puedes recoger en tienda o solicitar entrega local.</p>
+        </div>
+        <div>
+          <h3>¿Qué archivos aceptan?</h3>
+          <p>AI, PDF o SVG en vector. PNG/JPG a 300 dpi. Recomendamos colores en CMYK o referencia Pantone aproximada.</p>
+        </div>
+        <div>
+          <h3>¿Los colores serán iguales a mi pantalla?</h3>
+          <p>Pueden variar según técnica y material. Trabajamos con tolerancias estándar y referencias aproximadas.</p>
+        </div>
+        <div>
+          <h3>¿Cómo apruebo el diseño?</h3>
+          <p>Te enviamos un mockup digital con tamaños, posiciones y textos. La producción inicia al aprobar por escrito (WhatsApp o correo).</p>
+        </div>
+        <div>
+          <h3>¿Puedo llevar mis prendas o artículos?</h3>
+          <p>Sí, pero no garantizamos el resultado ni la integridad de piezas aportadas por el cliente.</p>
+        </div>
+        <div>
+          <h3>¿Cuál es su política de cambios y devoluciones?</h3>
+          <p>Los productos personalizados no tienen devolución. Si hay un defecto imputable, reparamos o reponemos. Repórtalo dentro de 48 horas con evidencia.</p>
+        </div>
+        <div>
+          <h3>¿Qué formas de pago aceptan?</h3>
+          <p>Transferencia, tarjeta (si aplica) y efectivo en tienda. Requerimos 50% de anticipo para iniciar.</p>
+        </div>
+        <div>
+          <h3>¿Cómo cuido mis prendas personalizadas?</h3>
+          <p>Lavar al revés, agua fría, no cloro, no planchar directamente sobre el estampado o bordado.</p>
+        </div>
+        <div>
+          <h3>¿Bordado, DTF o Vinil — cuál elegir?</h3>
+          <p>Bordado: look premium y durabilidad. DTF: full color en algodón y poliéster. Vinil: ideal para nombres, números y colores planos.</p>
+        </div>
+        <div>
+          <h3>¿Facturan?</h3>
+          <p>Sí. Comparte tus datos fiscales al confirmar el pedido para emitir la factura.</p>
+        </div>
+        <div>
+          <h3>Horario y contacto</h3>
+          <p>Lun–Vie 9:00–18:00, Sáb 9:00–14:00. WhatsApp: <a href="https://wa.me/528115049191" target="_blank" rel="noopener">+52 811 504 9191</a>.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Impresiones Gonsy</h3>
+          <p>Expertos en todas las técnicas de personalización</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear"></span> Impresiones Gonsy. Todos los derechos reservados.</p>
+        <p class="powered-by">powered by&nbsp;<a href="https://kennykrass.com" target="_blank" rel="noopener noreferrer">kennykrass</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    (function(){
+      var el = document.getElementById('currentYear');
+      if (el) el.textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>
+
