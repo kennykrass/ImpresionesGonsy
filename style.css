@@ -667,6 +667,7 @@ body {
     border: 0 !important;
     background-image: none;
     position: relative;
+    margin-left: 4px;
 }
 
 .footer-bottom .powered-by a::after { content: none !important; }
