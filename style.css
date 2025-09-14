@@ -658,8 +658,9 @@ body {
     color: rgba(255,255,255,0.35);
 }
 
-.footer-bottom .powered-by a {
-    color: inherit;
+.footer-bottom .powered-by a,
+.footer-bottom .powered-by a:visited {
+    color: var(--accent-color) !important;
     text-decoration: none !important;
     text-decoration-line: none;
     text-decoration-style: solid;
