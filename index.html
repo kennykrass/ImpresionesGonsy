@@ -522,14 +522,18 @@
         const closeBtn = document.querySelector('.more-drawer__close');
         const backdrop = document.getElementById('moreBackdrop');
 
-        if (!trigger || !drawer || !closeBtn || !backdrop) return;
+        if (!drawer || !closeBtn || !backdrop) return;
+
+        const setExpanded = (expanded) => {
+          if (trigger) trigger.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+        };
 
         const openDrawer = () => {
           drawer.classList.add('open');
           backdrop.hidden = false;
           requestAnimationFrame(() => backdrop.classList.add('open'));
           drawer.setAttribute('aria-hidden', 'false');
-          trigger.setAttribute('aria-expanded', 'true');
+          setExpanded(true);
           drawer.focus();
         };
 
@@ -537,18 +541,33 @@
           drawer.classList.remove('open');
           backdrop.classList.remove('open');
           drawer.setAttribute('aria-hidden', 'true');
-          trigger.setAttribute('aria-expanded', 'false');
+          setExpanded(false);
           setTimeout(() => { backdrop.hidden = true; }, 200);
-          trigger.focus();
+          if (trigger) trigger.focus();
         };
 
-        trigger.addEventListener('click', openDrawer);
+        if (trigger) trigger.addEventListener('click', openDrawer);
         closeBtn.addEventListener('click', closeDrawer);
         backdrop.addEventListener('click', closeDrawer);
         document.addEventListener('keydown', (e) => {
           if (e.key === 'Escape' && drawer.classList.contains('open')) closeDrawer();
         });
         drawer.querySelectorAll('a[href]').forEach(a => a.addEventListener('click', closeDrawer));
+
+        // En móvil, usar el hamburguesa principal para abrir el mismo drawer
+        const mobileHamburger = document.querySelector('.hamburger');
+        const navMenuEl = document.querySelector('.nav-menu');
+        if (mobileHamburger) {
+          mobileHamburger.addEventListener('click', (e) => {
+            if (window.matchMedia('(max-width: 768px)').matches) {
+              e.preventDefault();
+              e.stopImmediatePropagation();
+              if (mobileHamburger.classList.contains('active')) mobileHamburger.classList.remove('active');
+              if (navMenuEl && navMenuEl.classList.contains('active')) navMenuEl.classList.remove('active');
+              openDrawer();
+            }
+          }, true); // capture para anular el handler original
+        }
       })();
     </script>
 </body>
