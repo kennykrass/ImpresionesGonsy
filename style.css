@@ -279,6 +279,14 @@ body {
     color: var(--text-light);
 }
 
+.legal p {
+    margin-bottom: 1rem;
+}
+
+.legal p:last-child {
+    margin-bottom: 0;
+}
+
 .products-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
