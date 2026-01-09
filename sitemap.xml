@@ -7,12 +7,6 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://impresionesgonsy.com/terminos.html</loc>
-    <lastmod>2025-09-14</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://impresionesgonsy.com/faq.html</loc>
     <lastmod>2025-09-14</lastmod>
     <changefreq>yearly</changefreq>
@@ -30,10 +24,5 @@
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
-  <url>
-    <loc>https://impresionesgonsy.com/privacidad.html</loc>
-    <lastmod>2025-09-14</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
 </urlset>
+
