@@ -333,7 +333,7 @@ body {
 }
 
 .social-card img {
-    background: #f7f7f7;
+    background: linear-gradient(135deg, rgba(1, 158, 231, 0.08), rgba(229, 40, 126, 0.08));
     object-fit: contain;
 }
 
