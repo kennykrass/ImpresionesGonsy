@@ -318,6 +318,17 @@ body {
     font-size: 0.9rem;
 }
 
+.social-card a {
+    color: inherit;
+    display: block;
+    text-decoration: none;
+}
+
+.social-card img {
+    background: #f7f7f7;
+    object-fit: contain;
+}
+
 .video-showcase {
     margin-top: 2rem;
     text-align: center;
