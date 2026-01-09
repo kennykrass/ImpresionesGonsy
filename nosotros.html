@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nosotros - Impresiones Gonsy</title>
+  <meta name="description" content="Conoce la historia y experiencia de Impresiones Gonsy en personalizacion e impresion de prendas y productos.">
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="apple-touch-icon" href="logo.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <div class="nav-brand">
+        <img src="logo.png" alt="Impresiones Gonsy" class="logo">
+        <h1>Impresiones Gonsy</h1>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="index.html#inicio">Inicio</a></li>
+        <li><a href="index.html#servicios">Servicios</a></li>
+        <li><a href="index.html#galeria">Galeria</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container" style="padding: 60px 0;">
+    <h2 class="section-title" style="margin-bottom: 1rem;">Nosotros</h2>
+    <div class="technique-section" style="border-top-color: var(--secondary-color);">
+      <div class="legal">
+        <p>En Impresiones GONSY contamos con m&aacute;s de 10 a&ntilde;os de experiencia en la impresi&oacute;n y personalizaci&oacute;n de prendas, camisetas, sudaderas etc. poniendo especial atenci&oacute;n a cada detalle para ofrecer un producto y una impresi&oacute;n de calidad.</p>
+        <p>Desde nuestro comienzo lo m&aacute;s importante ha sido escuchar y tomar en cuenta las peticiones de nuestros clientes para entregar un producto que satisface las expectativas y necesidades, ya sea desde un pedido de una pieza hasta uniformes para el personal de su empresa o negocio.</p>
+        <p>En este tiempo hemos trabajado para cientos de clientes de los cuales, adem&aacute;s de atender con gusto, tambi&eacute;n hemos aprendido y eso nos ha acercado cada vez m&aacute;s a comprender lo que cada uno espera y trabajar de una forma m&aacute;s cercana y personalizada con cada pedido.</p>
+        <p>Intentamos innovar teniendo disponible lo &uacute;ltimo en personalizaci&oacute;n y estando siempre al d&iacute;a con las tendencias para facilitar y agilizar la experiencia de compra en GONSY.</p>
+        <p>Estamos muy orgullosos de ser referente de impresi&oacute;n y personalizaci&oacute;n en nuestra zona y trabajamos cada d&iacute;a para mantener la confianza de nuestros clientes.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Impresiones Gonsy</h3>
+          <p>Expertos en todas las tecnicas de personalizacion</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear"></span> Impresiones Gonsy. Todos los derechos reservados.</p>
+        <p class="powered-by">powered by&nbsp;<a href="https://kennykrass.com" target="_blank" rel="noopener noreferrer">kennykrass</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    (function(){
+      var el = document.getElementById('currentYear');
+      if (el) el.textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>
