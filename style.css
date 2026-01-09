@@ -334,6 +334,7 @@ body {
 
 .social-card img {
     background: linear-gradient(135deg, rgba(1, 158, 231, 0.18), rgba(229, 40, 126, 0.18));
+    height: 220px;
     object-fit: contain;
 }
 
