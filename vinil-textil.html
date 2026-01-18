@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vinil Textil - Impresiones Gonsy</title>
+  <meta name="description" content="Galeria de vinil textil de Impresiones Gonsy.">
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="apple-touch-icon" href="logo.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <div class="nav-brand">
+        <img src="logo.png" alt="Impresiones Gonsy" class="logo">
+        <h1>Impresiones Gonsy</h1>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="index.html#inicio">Inicio</a></li>
+        <li><a href="index.html#servicios">Servicios</a></li>
+        <li><a href="index.html#galeria">Galeria</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container" style="padding: 60px 0;">
+    <h2 class="section-title" style="margin-bottom: 1rem;">Vinil Textil</h2>
+    <div class="technique-section" style="border-top-color: var(--secondary-color);">
+      <div class="products-grid">
+                    <div class="product-card">
+                        <img loading="lazy" src="assets/media/vinil/vinil-01.jpg" alt="Vinil Textil 1">
+                    </div>
+                    <div class="product-card">
+                        <img loading="lazy" src="assets/media/vinil/vinil-02.jpg" alt="Vinil Textil 2">
+                    </div>
+                    <div class="product-card">
+                        <img loading="lazy" src="assets/media/vinil/vinil-03.jpg" alt="Vinil Textil 3">
+                    </div>
+                    <div class="product-card">
+                        <img loading="lazy" src="assets/media/vinil/vinil-04.jpg" alt="Vinil Textil 4">
+                    </div>
+                    <div class="product-card">
+                        <img loading="lazy" src="assets/media/vinil/vinil-05.jpg" alt="Vinil Textil 5">
+                    </div>
+                    <div class="product-card">
+                        <img loading="lazy" src="assets/media/vinil/vinil-06.jpg" alt="Vinil Textil 6">
+                    </div>
+                    <div class="product-card">
+                        <img loading="lazy" src="assets/media/vinil/vinil-07.jpg" alt="Vinil Textil 7">
+                    </div>
+                    <div class="product-card">
+                        <img loading="lazy" src="assets/media/vinil/vinil-08.jpg" alt="Vinil Textil 8">
+                    </div>
+                    <div class="product-card">
+                        <img loading="lazy" src="assets/media/vinil/vinil-09.jpg" alt="Vinil Textil 9">
+                    </div>
+                    <div class="product-card">
+                        <img loading="lazy" src="assets/media/vinil/vinil-10.jpg" alt="Vinil Textil 10">
+                    </div>
+                    <div class="product-card">
+                        <img loading="lazy" src="assets/media/vinil/vinil-11.jpg" alt="Vinil Textil 11">
+                    </div>
+                    <div class="product-card">
+                        <img loading="lazy" src="assets/media/vinil/vinil-12.jpg" alt="Vinil Textil 12">
+                    </div>
+                    <div class="product-card">
+                        <img loading="lazy" src="assets/media/vinil/vinil-13.jpg" alt="Vinil Textil 13">
+                    </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Impresiones Gonsy</h3>
+          <p>Expertos en todas las tecnicas de personalizacion</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear"></span> Impresiones Gonsy. Todos los derechos reservados.</p>
+        <p class="powered-by">powered by&nbsp;<a href="https://kennykrass.com" target="_blank" rel="noopener noreferrer">kennykrass</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    (function(){
+      var el = document.getElementById("currentYear");
+      if (el) el.textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>
