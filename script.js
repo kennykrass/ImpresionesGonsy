@@ -285,8 +285,11 @@ document.head.appendChild(style);
 
 // Lightbox for gallery images
 (() => {
-    const images = document.querySelectorAll('.product-card img');
-    if (!images.length) return;
+    const getTargetImage = (event) => {
+    const target = event.target;
+    if (!(target instanceof HTMLElement)) return null;
+    return target.closest('.product-card img');
+};
 
     const overlay = document.createElement('div');
     overlay.className = 'lightbox-overlay';
@@ -319,9 +322,10 @@ document.head.appendChild(style);
         document.body.style.overflow = '';
     };
 
-    images.forEach(img => {
-        img.addEventListener('click', () => open(img.src, img.alt));
-    });
+    document.addEventListener('click', (event) => {
+    const img = getTargetImage(event);
+    if (img) open(img.src, img.alt);
+});
 
     overlay.addEventListener('click', (event) => {
         if (event.target === overlay) close();
@@ -335,4 +339,5 @@ document.head.appendChild(style);
     });
 })();
 console.log('Impresiones Gonsy - Website loaded successfully!');
+
 
