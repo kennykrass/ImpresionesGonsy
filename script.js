@@ -84,7 +84,7 @@ const modal = document.getElementById('serviceModal');
 const modalTitle = document.getElementById('modalTitle');
 const modalBody = document.getElementById('modalBody');
 const closeBtn = document.querySelector('.close');
-const serviceButtons = document.querySelectorAll('[data-service]');
+const serviceButtons = document.querySelectorAll('[data-service]');\r\n\r\nconst serviceModalGuard = modal && modalTitle && modalBody && closeBtn && serviceButtons.length;\r\nif (serviceModalGuard) {
 
 const serviceDetails = {
     playeras: {
@@ -148,34 +148,24 @@ serviceButtons.forEach(button => {
         }
     });
 });
-
-closeBtn.addEventListener('click', () => {
-    modal.style.display = 'none';
-});
-
-window.addEventListener('click', (e) => {
-    if (e.target === modal) {
-        modal.style.display = 'none';
-    }
-});
-
-// Contact Form
+\r\n\r\n    closeBtn.addEventListener('click', () => {\r\n        modal.style.display = 'none';\r\n    });\r\n\r\n    window.addEventListener('click', (e) => {\r\n        if (e.target === modal) {\r\n            modal.style.display = 'none';\r\n        }\r\n    });\r\n}\r\n\r\n// Contact Form
 const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
 
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    // Get form data
-    const formData = new FormData(contactForm);
-    const data = Object.fromEntries(formData);
-    
-    // Here you would normally send the data to a server
-    // For now, we'll just show an alert
-    alert('¡Gracias por tu mensaje! Te contactaremos pronto.');
-    
-    // Reset form
-    contactForm.reset();
-});
+        // Get form data
+        const formData = new FormData(contactForm);
+        const data = Object.fromEntries(formData);
+
+        // Here you would normally send the data to a server
+        // For now, we'll just show an alert
+        alert('Gracias por tu mensaje! Te contactaremos pronto.');
+
+        // Reset form
+        contactForm.reset();
+    });
+}
 
 // Animate on scroll
 const observerOptions = {
@@ -346,5 +336,7 @@ console.log('Impresiones Gonsy - Website loaded successfully!');
 
 
 
-console.log('Lightbox script loaded');
+
+
+
 
