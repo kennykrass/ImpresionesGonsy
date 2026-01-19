@@ -56,13 +56,13 @@ body {
 }
 
 .nav-brand .logo {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid var(--text-dark);
-    padding: 2px;
-    background: white;
+    width: auto;
+    height: 52px;
+    border-radius: 0;
+    object-fit: contain;
+    border: none;
+    padding: 0;
+    background: transparent;
 }
 
 .nav-brand h1 {
