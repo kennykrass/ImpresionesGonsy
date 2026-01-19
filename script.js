@@ -288,7 +288,10 @@ document.head.appendChild(style);
     const getTargetImage = (event) => {
     const target = event.target;
     if (!(target instanceof HTMLElement)) return null;
-    return target.closest('.product-card img');
+    if (target.matches && target.matches('.product-card img')) return target;
+    const parentCard = target.closest && target.closest('.product-card');
+    if (parentCard) return parentCard.querySelector('img');
+    return null;
 };
 
     const overlay = document.createElement('div');
@@ -339,5 +342,6 @@ document.head.appendChild(style);
     });
 })();
 console.log('Impresiones Gonsy - Website loaded successfully!');
+
 
 
