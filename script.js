@@ -244,6 +244,7 @@ lazyVideos.forEach(video => {
 
 // Particle effect for hero section (optional enhancement)
 const heroSection = document.querySelector('.hero');
+if (heroSection) {
 const particlesContainer = document.createElement('div');
 particlesContainer.className = 'particles';
 particlesContainer.style.position = 'absolute';
@@ -280,6 +281,7 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+}
 
 // Lightbox for gallery images
 (() => {
@@ -333,3 +335,4 @@ document.head.appendChild(style);
     });
 })();
 console.log('Impresiones Gonsy - Website loaded successfully!');
+
