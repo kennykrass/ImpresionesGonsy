@@ -84,7 +84,10 @@ const modal = document.getElementById('serviceModal');
 const modalTitle = document.getElementById('modalTitle');
 const modalBody = document.getElementById('modalBody');
 const closeBtn = document.querySelector('.close');
-const serviceButtons = document.querySelectorAll('[data-service]');\r\n\r\nconst serviceModalGuard = modal && modalTitle && modalBody && closeBtn && serviceButtons.length;\r\nif (serviceModalGuard) {
+const serviceButtons = document.querySelectorAll('[data-service]');
+
+const serviceModalGuard = modal && modalTitle && modalBody && closeBtn && serviceButtons.length;
+if (serviceModalGuard) {
 
 const serviceDetails = {
     playeras: {
@@ -148,7 +151,20 @@ serviceButtons.forEach(button => {
         }
     });
 });
-\r\n\r\n    closeBtn.addEventListener('click', () => {\r\n        modal.style.display = 'none';\r\n    });\r\n\r\n    window.addEventListener('click', (e) => {\r\n        if (e.target === modal) {\r\n            modal.style.display = 'none';\r\n        }\r\n    });\r\n}\r\n\r\n// Contact Form
+
+
+    closeBtn.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+    window.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+}
+
+// Contact Form
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
@@ -332,6 +348,8 @@ document.head.appendChild(style);
     });
 })();
 console.log('Impresiones Gonsy - Website loaded successfully!');
+
+
 
 
 
