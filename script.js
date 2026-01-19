@@ -345,3 +345,6 @@ console.log('Impresiones Gonsy - Website loaded successfully!');
 
 
 
+
+console.log('Lightbox script loaded');
+
