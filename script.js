@@ -281,4 +281,55 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
+// Lightbox for gallery images
+(() => {
+    const images = document.querySelectorAll('.product-card img');
+    if (!images.length) return;
+
+    const overlay = document.createElement('div');
+    overlay.className = 'lightbox-overlay';
+    overlay.setAttribute('aria-hidden', 'true');
+
+    const closeBtn = document.createElement('button');
+    closeBtn.type = 'button';
+    closeBtn.className = 'lightbox-close';
+    closeBtn.innerHTML = '&times;';
+
+    const fullImg = document.createElement('img');
+    fullImg.alt = '';
+
+    overlay.appendChild(closeBtn);
+    overlay.appendChild(fullImg);
+    document.body.appendChild(overlay);
+
+    const open = (src, alt) => {
+        fullImg.src = src;
+        fullImg.alt = alt || '';
+        overlay.classList.add('open');
+        overlay.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    };
+
+    const close = () => {
+        overlay.classList.remove('open');
+        overlay.setAttribute('aria-hidden', 'true');
+        fullImg.src = '';
+        document.body.style.overflow = '';
+    };
+
+    images.forEach(img => {
+        img.addEventListener('click', () => open(img.src, img.alt));
+    });
+
+    overlay.addEventListener('click', (event) => {
+        if (event.target === overlay) close();
+    });
+
+    closeBtn.addEventListener('click', close);
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && overlay.classList.contains('open')) {
+            close();
+        }
+    });
+})();
 console.log('Impresiones Gonsy - Website loaded successfully!');
